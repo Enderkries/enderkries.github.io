@@ -37,7 +37,7 @@
     
     function loadPage() {
       const url = document.getElementById('url').value;
-      iframe.src = url;
+      iframe.src = 'https://cors-anywhere.herokuapp.com/' + url;
     }
 
     function toggleFullScreen() {
@@ -54,7 +54,7 @@
 
     function changeURL() {
       const newUrl = document.getElementById('new-url').value;
-      iframe.src = newUrl;
+      iframe.src = 'https://cors-anywhere.herokuapp.com/' + newUrl;
       urlBar.style.display = 'none';
     }
 
@@ -82,7 +82,7 @@
       if (event.target.tagName === 'A') {
         event.preventDefault();
         const newUrl = event.target.href;
-        iframe.src = newUrl;
+        iframe.src = 'https://cors-anywhere.herokuapp.com/' + newUrl;
       }
     });
   </script>
